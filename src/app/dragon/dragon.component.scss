@@ -1,0 +1,33 @@
+h2 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.dragon {
+  &__name {
+    font-size: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+  }
+  &__input {
+    padding: 0.5rem;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    color: teal;
+    padding: 0 0.3rem;
+  }
+}
+
+.name__input {
+  display: flex;
+  justify-content: center;
+}

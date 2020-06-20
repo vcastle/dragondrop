@@ -1,0 +1,28 @@
+<div class="dragon">
+  <h1 class="title">Build your Dragon</h1>
+
+  <!--Name your dragon-->
+  <div class="dragon__name">
+    <div class="name__input" *ngIf="!this.name">
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          #dragonName
+          name="dragonName"
+          placeholder="Name your dragon"
+          class="dragon__input"
+        />
+      </mat-form-field>
+      <button
+        type="submit"
+        title="Save name"
+        (click)="setName(dragonName.value)"
+        class="dragon__btn"
+      >
+        <i class="fas fa-2x fa-save"></i>
+      </button>
+    </div>
+    <!--Show Name-->
+    <h2 id="dragonName">{{ name }}</h2>
+  </div>
+</div>

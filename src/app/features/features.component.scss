@@ -1,0 +1,97 @@
+/*colors*/
+$white: #fff;
+
+
+/* material overrides*/
+mat-card {
+  margin: 1em;
+  cursor: pointer;
+  background-color: #efefef;
+  border: 2px solid #e8e8e8;
+  width: 12rem;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+}
+
+mat-card-subtitle {
+  font-variant: small-caps;
+  font-size: 1.2rem;
+  color: dodgerblue;
+}
+
+h2 {
+  text-align: center;
+  color: #F2F1EE;
+}
+
+/* Dragon */
+.traits {
+  &-container {
+    padding: 1rem 0;
+    display: block;
+    background-color: #58bc67;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+}
+
+/* Features */
+.features {
+
+  &-container {
+    padding: 1rem 0;
+    display: block;
+    background-color: #66769C;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  &__item {
+    margin: 10px;
+    padding: 20px 10px;
+    border-bottom: solid 1px red;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: $white;
+    font-size: 14px;
+  }
+}
+
+.list {
+  display: inline-flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+/*drag n drop*/
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

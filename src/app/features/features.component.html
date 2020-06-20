@@ -1,0 +1,39 @@
+<div class="features">
+  <div class="traits-container">
+    <h2>Your Dragon</h2>
+    <div
+      class="list"
+      cdkDropList
+      #traitList="cdkDropList"
+      [cdkDropListData]="traits"
+      [cdkDropListConnectedTo]="[featureList]"
+      (cdkDropListDropped)="onDrop($event)"
+    >
+      <mat-card *ngFor="let trait of traits" cdkDrag>
+        <mat-card-header>
+          <mat-card-title>{{ trait.name }}</mat-card-title>
+          <mat-card-subtitle>{{ trait.category }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="features-container">
+    <h2>Features</h2>
+    <div
+      class="list"
+      cdkDropList
+      #featureList="cdkDropList"
+      [cdkDropListData]="features"
+      [cdkDropListConnectedTo]="[traitList]"
+      (cdkDropListDropped)="onDrop($event)"
+    >
+      <mat-card *ngFor="let feature of features" cdkDrag>
+        <mat-card-header>
+          <mat-card-title>{{ feature.name }}</mat-card-title>
+          <mat-card-subtitle>{{ feature.category }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+</div>
